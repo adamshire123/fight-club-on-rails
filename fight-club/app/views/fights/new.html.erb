@@ -1,0 +1,20 @@
+<h1> new fight</h1>
+<% if flash[:alert] %>
+    <div class="notice"><%= flash[:alert] %></div>
+  <% end %>
+
+<%= form_tag(fights_path, method: "post") do  %>
+  <p>
+    <%= label_tag "opponent 1" %><br>
+    <%= text_field_tag :opponent1 %>
+  </p>
+ 
+  <p>
+    <%= label_tag "opponent 2" %><br>
+    <%= text_field_tag :opponent2 %>
+  </p>
+ 
+  <p>
+    <%= submit_tag %>
+  </p>
+<% end %>
